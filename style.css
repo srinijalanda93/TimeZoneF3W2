@@ -8,19 +8,33 @@ section {
 }
 
 
-
-
+#timezoneResult{
+    border: 2px solid #f5f1f1;
+    box-sizing: border-box;
+    width:500px;
+    margin: auto;
+}
+#timezoneResult>span>p{
+    color:white;
+}
 
 #myCurrentLoc{
     border: 2px solid #000000;
     box-sizing: border-box;
     background-color: lightblue; /* Just for visualization */
+    /* width:500px; */
+    /* margin: auto; */
+    height: 500px;
 }
-#myCurrentLoc>p ,#myCurrentLoc>span>p{
+#myCurrentLoc>p ,#myCurrentLoc>span>p,
+#timezoneResult>p,#timezoneResult>span>p
+{
     font-size: 25px;
     margin-left: 20px;
 }
-#myCurrentLoc>span>p{
+#myCurrentLoc>span>p,
+#timezoneResult>span>p
+{
     display:inline-block;
     margin-bottom:0px ;
 }
@@ -40,6 +54,11 @@ input::placeholder{
     text-align: left;
     line-height: 10px;
     font-size: 20px;
+}
+input[type="text"] {
+    color:white; /* Change to the desired color */
+    font-size: 20px;
+    /* Add any other styles you need */
 }
 input{
     border: 1px solid #FFFFFF;
@@ -64,4 +83,11 @@ button{
     font-weight: 700;
     font-size: 18px;
     margin-left: 40px;
+}
+#displayaddress>p{
+    display:none;
+}
+#timezoneResult>p{
+    color:white;
+    font-size: 20px;
 }
