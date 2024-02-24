@@ -22,9 +22,7 @@ function showPosition(position) {
   ArrCoordinate.push(lat, long);
   console.log(`The latitude is: ${position.coords.latitude}`);
   console.log(`The longitude is: ${position.coords.longitude}`);
-  fetch(
-    `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${long}&format=json&apiKey=${api}`
-  )
+  fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${long}&format=json&apiKey=${api}`)
     .then((resp) => resp.json())
     .then((data) => {
       // console.log(data.results); //
@@ -81,37 +79,42 @@ function displayTimeZoneUi(data, coordinatesArrr) {
     <p><strong>PostCode:</strong> ${coordinatesArrr[4]}</p>`;
 }
 
-
-
 //Carrer del Pintor Navarro Llorens, 7, 46008 Valencia, Spain
 function getTimezone() {
   var address = document.getElementById("Address").value;
   // Validate the entered address
   if (!address) {
     alert("Please enter a valid address.");
-   const alertTag=document.querySelector('#displayaddress>p');
-   alertTag.style.display='flex';
+    const alertTag = document.querySelector("#displayaddress>p");
+    alertTag.style.display = "flex";
     return;
   }
 
   // Use Geoapify Geocoding API to get coordinates
-  fetch(`https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(address)}&apiKey=${api}`)
+  fetch(
+    `https://api.geoapify.com/v1/geocode/search?text=${encodeURIComponent(
+      address
+    )}&apiKey=${api}`
+  )
     .then((resp) => resp.json())
     .then((data) => {
       //console.log("the address data", geocodingResult);
       if (data.features && data.features.length > 0) {
-        const timeZone=data.features[0].properties.timezone;
-        let city,country,postcode,lat,lon;
-        let arr=[];
-        city=data.features[0].properties.city;
-        country=data.features[0].properties.country;
-        postcode=data.features[0].properties.postcode;
-        lat=data.features[0].properties.lat;
-        lon=data.features[0].properties.lon;
-        arr.push(lon,lat,city,country,postcode);
-        console.log("the data for city,country,postal code",data.features[0].properties)
-       
-        displayUserTz(timeZone,arr);
+        const timeZone = data.features[0].properties.timezone;
+        let city, country, postcode, lat, lon;
+        let arr = [];
+        city = data.features[0].properties.city;
+        country = data.features[0].properties.country;
+        postcode = data.features[0].properties.postcode;
+        lat = data.features[0].properties.lat;
+        lon = data.features[0].properties.lon;
+        arr.push(lon, lat, city, country, postcode);
+        console.log(
+          "the data for city,country,postal code",
+          data.features[0].properties
+        );
+
+        displayUserTz(timeZone, arr);
       } else {
         alert("Unable to retrieve coordinates for the given address.");
       }
@@ -119,10 +122,10 @@ function getTimezone() {
 }
 
 function displayUserTz(data, coordinatesArrr) {
-    //console.log(data);
-    const divTag = document.getElementById("timezoneResult");
-  
-    divTag.innerHTML += `
+  //console.log(data);
+  const divTag = document.getElementById("timezoneResult");
+
+  divTag.innerHTML += `
   <span><p><strong>Lat:</strong>${coordinatesArrr[1]}</p><p><strong>Lat:</strong>${coordinatesArrr[0]}</p></span>
   <p><strong>Name Of Time Zone</strong> :${data.abbreviation_DST}</p>
       <p><strong>Offset STD:</strong> ${data.offset_STD}</p>
@@ -132,4 +135,4 @@ function displayUserTz(data, coordinatesArrr) {
       <p><strong>Country:</strong> ${coordinatesArrr[3]}</p>
       <p><strong>City:</strong> ${coordinatesArrr[2]}</p>
       <p><strong>PostCode:</strong> ${coordinatesArrr[4]}</p>`;
-  }
+}

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time Zone</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./time-zones.ico" type="image/x-icon" />
-</head>
-<body>
-  <h1>TimeZone API</h1>
-  <h1>Your Current Time Zone</h1>
-  <section>
-    <div id="myCurrentLoc">
-    </div>
-    <div id="part2">
-<h1>Enter the Address</h1>
-<input type="text" name="Address" id="Address" placeholder="Address"><br>
-<button onclick="getTimezone()">Submit</button>
-<div id="displayaddress">
-    <p>Please Enter Address</p>
-</div>
-<div id="timezoneResult"></div>
-    </div>
-</section>
+  </head>
+  <body>
+    <h1>TimeZone API</h1>
+    <h1>Your Current Time Zone</h1>
+    <section>
+      <div id="myCurrentLoc"></div>
+      <div id="part2">
+        <h1>Enter the Address</h1>
+        <input
+          type="text"
+          name="Address"
+          id="Address"
+          placeholder="Address"
+        /><br />
+        <button onclick="getTimezone()">Submit</button>
+        <div id="displayaddress">
+          <p>Please Enter Address</p>
+        </div>
+        <div id="timezoneResult"></div>
+      </div>
+    </section>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

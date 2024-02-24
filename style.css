@@ -1,93 +1,92 @@
-*{
-    font-family: "Inter", sans-serif;
+* {
+  font-family: "Inter", sans-serif;
 }
 section {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Set section height to full viewport height */
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Set section height to full viewport height */
 }
 
+#timezoneResult {
+  border: 2px solid #f5f1f1;
+  box-sizing: border-box;
+  width: 500px;
+  margin: auto;
+}
+#timezoneResult > span > p {
+  color: white;
+}
 
-#timezoneResult{
-    border: 2px solid #f5f1f1;
-    box-sizing: border-box;
-    width:500px;
-    margin: auto;
+#myCurrentLoc {
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  background-color: lightblue; /* Just for visualization */
+  /* width:500px; */
+  /* margin: auto; */
+  height: 500px;
 }
-#timezoneResult>span>p{
-    color:white;
+#myCurrentLoc > p,
+#myCurrentLoc > span > p,
+#timezoneResult > p,
+#timezoneResult > span > p {
+  font-size: 25px;
+  margin-left: 20px;
 }
-
-#myCurrentLoc{
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    background-color: lightblue; /* Just for visualization */
-    /* width:500px; */
-    /* margin: auto; */
-    height: 500px;
-}
-#myCurrentLoc>p ,#myCurrentLoc>span>p,
-#timezoneResult>p,#timezoneResult>span>p
-{
-    font-size: 25px;
-    margin-left: 20px;
-}
-#myCurrentLoc>span>p,
-#timezoneResult>span>p
-{
-    display:inline-block;
-    margin-bottom:0px ;
+#myCurrentLoc > span > p,
+#timezoneResult > span > p {
+  display: inline-block;
+  margin-bottom: 0px;
 }
 #part2 {
-    flex: 1; /* Make the second div take remaining space */
-    background-color: rgb(1, 1, 1); /* Just for visualization */
+  flex: 1; /* Make the second div take remaining space */
+  background-color: rgb(1, 1, 1); /* Just for visualization */
 }
-#part2 h1{
-    color:white;
-    margin-left:20px;
-    margin-bottom: 9px;
-    font-size: 40px;
-    padding-left: 20px;
+#part2 h1 {
+  color: white;
+  margin-left: 20px;
+  margin-bottom: 9px;
+  font-size: 40px;
+  padding-left: 20px;
 }
-input::placeholder{
-    color:white;
-    text-align: left;
-    line-height: 10px;
-    font-size: 20px;
+input::placeholder {
+  color: white;
+  text-align: left;
+  line-height: 10px;
+  font-size: 20px;
 }
 input[type="text"] {
-    color:white; /* Change to the desired color */
-    font-size: 20px;
-    /* Add any other styles you need */
+  color: white; /* Change to the desired color */
+  font-size: 20px;
+  /* Add any other styles you need */
 }
-input{
-    border: 1px solid #FFFFFF;
-   background-color: transparent;
-   margin-left: 40px;
-   margin-bottom: 10px;
-   width:90vw;
-   height:10vh;
-   border-radius: 2px;
+input {
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  width: 90vw;
+  height: 10vh;
+  border-radius: 2px;
 }
-button{
-    background-color: #FFFFFF;
-    border: none;
-    padding-inline: 1%;
-    color:black;
-    margin-left: 40px;
-    height:5vh;
-    font-size: 20px;
+button {
+  background-color: #ffffff;
+  border: none;
+  padding-inline: 1%;
+  color: black;
+  margin-left: 40px;
+  height: 5vh;
+  font-size: 20px;
 }
-#displayaddress>p{
-    color:red;
-    font-weight: 700;
-    font-size: 18px;
-    margin-left: 40px;
+#displayaddress > p {
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: 40px;
 }
-#displayaddress>p{
-    display:none;
+#displayaddress > p {
+  display: none;
 }
-#timezoneResult>p{
-    color:white;
-    font-size: 20px;
+#timezoneResult > p {
+  color: white;
+  font-size: 20px;
 }
