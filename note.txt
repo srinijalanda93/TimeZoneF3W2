@@ -1,0 +1,12 @@
+abbreviation_DST: "IST"
+abbreviation_STD: "IST"
+name: "Asia/Kolkata"
+offset_DST: "+05:30"
+offset_DST_seconds: 19800
+offset_STD: "+05:30"
+offset_STD_seconds: 1980
+
+<p>Offset STD:${}</p>
+<p>Offset STD Seconds :${}</p>
+<p>Offset DST :${}</p>
+<p>Offset DST Seconds:${}</p>
